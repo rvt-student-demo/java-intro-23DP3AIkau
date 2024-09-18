@@ -54,7 +54,7 @@ public class App
         System.out.println(firstn + " + " + second + " = " + (firstn+second));
         System.out.println(firstn + " - " + second + " = " + (firstn-second));
         System.out.println(firstn + " * " + second + " = " + (firstn*second));
-        System.out.println(firstn + " / " + second + " = " + (firstn/second));
+        System.out.println(firstn + " / " + second + " = " + ((double)firstn/second));
         System.out.println(firstn + " un " + second + " Vidējais skaitlis = " + ((double)firstn+second)/2); //videjais
 
 
