@@ -44,20 +44,26 @@ public class App
         
 
 
+        // System.out.println("Give the first number:");
+        // int firstn = Integer.valueOf(scanner.nextLine());
 
-        System.out.println("Give the first number:");
-        int firstn = Integer.valueOf(scanner.nextLine());
+        // System.out.println("Give the second number:");
+        // int second = Integer.valueOf(scanner.nextLine());
 
-        System.out.println("Give the second number:");
-        int second = Integer.valueOf(scanner.nextLine());
-
-        System.out.println(firstn + " + " + second + " = " + (firstn+second));
-        System.out.println(firstn + " - " + second + " = " + (firstn-second));
-        System.out.println(firstn + " * " + second + " = " + (firstn*second));
-        System.out.println(firstn + " / " + second + " = " + ((double)firstn/second));
-        System.out.println(firstn + " un " + second + " Vidējais skaitlis = " + ((double)firstn+second)/2); //videjais
+        // System.out.println(firstn + " + " + second + " = " + (firstn+second));
+        // System.out.println(firstn + " - " + second + " = " + (firstn-second));
+        // System.out.println(firstn + " * " + second + " = " + (firstn*second));
+        // System.out.println(firstn + " / " + second + " = " + ((double)firstn/second));
+        // System.out.println(firstn + " un " + second + " Vidējais skaitlis = " + ((double)firstn+second)/2); //videjais
 
 
+        System.out.println("Give speed:");
+        int speed = Integer.valueOf(scanner.nextLine());
+
+
+        if (speed > 120) {
+            System.out.println("Speeding ticket!");
+        }
     }
 
 }
