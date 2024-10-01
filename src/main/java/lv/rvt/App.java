@@ -8,20 +8,12 @@ public class App
     {
 
         Scanner scanner = new Scanner(System.in);
-        int karta = 0;
-        int summ = 0;
-        while (true) {
-            System.out.println("Give number:");
-            int number = Integer.valueOf(scanner.nextLine());
-            if (number == 0) {
-                break;
-            }
-            summ += number;
-            karta += 1;
-            
+        System.out.println("Give number:");
+        int number = Integer.valueOf(scanner.nextLine());
+
+        for (int i = 0; i <= number; i++ ) {
+            System.out.println(i);
         }
-        System.out.println("Number of the numbers: " + karta);
-        System.out.println("Sum of the numbers: " + summ);
 
 
                 
