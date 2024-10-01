@@ -8,7 +8,6 @@ public class App
     {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Give number:");
         int number = Integer.valueOf(scanner.nextLine());
 
         for (int i = 0; i <= number; i++ ) {
