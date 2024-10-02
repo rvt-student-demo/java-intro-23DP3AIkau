@@ -7,20 +7,38 @@ public class App
     public static void main( String[] args )
     {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Give numbers: ");
 
-        System.out.println("Last number?"); 
-        int number = Integer.valueOf(scanner.nextLine());
+        int sk = 0;
+        int karta = 0;
+        double avg = 0;
+        int odd = 0;
+        int even = 0;
 
-        int skaitlis = 0;
 
-        for (int i = 1; i <= number; i++ ) {
-            skaitlis += i;
+
+        while(true){
+            int number = Integer.valueOf(scanner.nextLine());
+            if (number == -1) {
+                System.out.println("Thx! Bye!");
+                System.out.println("Sum: " + sk);
+                System.out.println("Numbers: " + karta);
+                System.out.println("Average: " + avg);
+                System.out.println("Even: " + even);
+                System.out.println("Odd: " + odd);
+                break;
+            }
+            if (number % 2 == 0) {
+                even++;
+            } else {
+                odd++;
+            }
+            sk += number;
+            karta++;
+            avg = sk/(double)karta;
         }
-
-        System.out.println("The sum is " + skaitlis);
-
-                
-
+        
+        
     }
 
 }
