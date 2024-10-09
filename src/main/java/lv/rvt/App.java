@@ -5,20 +5,14 @@ import java.util.Scanner;
 public class App 
 {
     public static void main( String[] args ) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("How many times?");
+        divibleByThree(2, 10);
+    }
 
-        int number = Integer.valueOf(scanner.nextLine());
-    
-        for (int i = 1; i <= number; i++) {
-            reprint();
+    public static void divibleByThree(int start, int end) {
+        for (int i = start; i <= end; i++) {
+            if (i % 3 == 0) {
+                System.out.println(i);
+            }
         }
-
     }
-
-    public static void reprint() {
-        System.out.println("In a hole in the ground there lived a method");
-
-    }
-
 }
