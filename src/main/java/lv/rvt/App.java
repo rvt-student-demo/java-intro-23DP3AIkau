@@ -5,19 +5,15 @@ import java.util.Scanner;
 public class App 
 {
     public static void main( String[] args ) {
-        Scanner scanner = new Scanner(System.in);
-
-
-        int start = Integer.valueOf(scanner.nextLine());
-        int end = Integer.valueOf(scanner.nextLine());
-        divisibleByThree(start, end);
-    }
-
-    public static void divisibleByThree(int start, int end) {
-        for (int i = start; i <= end; i++) {
-            if (i % 3 == 0) {
-                System.out.println(i);
-            }
-        }
+        // Scanner scanner = new Scanner(System.in);
+        Stars.printStars(5);
+        Stars.printStars(3);
+        Stars.printStars(9);
+        System.out.println("");
+        Stars.printSquare(4);
+        System.out.println("");
+        Stars.printRectangle(17,3);
+        System.out.println("");
+        Stars.printTriangle(4);
     }
 }
