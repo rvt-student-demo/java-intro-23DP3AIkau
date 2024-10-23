@@ -15,14 +15,24 @@ public class App
             }
             list.add(input);
         }
+
+
         System.out.print("From where? ");
         int start = Integer.valueOf(scanner.nextLine());
 
-        System.out.print("To where? ");
-        int end = Integer.valueOf(scanner.nextLine());
+        if (start >= 0 && start < list.size()){
+            System.out.print("To where? ");
+            int end = Integer.valueOf(scanner.nextLine());
 
-        for (int i = start; i <= end; i++){
-            System.out.println(list.get(i));
+            if (end >= start && end < list.size()){
+                for (int i = start; i <= end; i++){
+                    System.out.println(list.get(i));
+                }
+            } else {
+                System.out.println("Nepareiza ievade");
+            }
+        } else {
+            System.out.println("Nepareiza ievade");
         }
     }
 }
