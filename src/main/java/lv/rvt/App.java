@@ -1,24 +1,28 @@
 package lv.rvt;
 
-import java.util.Scanner;
-import java.util.ArrayList;
+import java.util.*;
 
 
 public class App 
 {
-    public static void main( String[] args ) {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        ArrayList<String> names = new ArrayList<>();
-        
-        String name = "";
+        ArrayList<Integer> list = new ArrayList<>();
         while (true){
-            name = scanner.nextLine();
-            names.add(name);
-            if (name == "") {
+            int input = Integer.valueOf(scanner.nextLine());
+            if (input == -1){
                 break;
             }
+            list.add(input);
         }
-        System.out.println(names.get(2));
+        System.out.print("From where? ");
+        int start = Integer.valueOf(scanner.nextLine());
+
+        System.out.print("To where? ");
+        int end = Integer.valueOf(scanner.nextLine());
+
+        for (int i = start; i <= end; i++){
+            System.out.println(list.get(i));
+        }
     }
 }
