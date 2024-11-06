@@ -8,21 +8,16 @@ public class App
     public static void main(String[] args) {
         
 
-        Account matthewsAccount = new Account("Matthews account", 1000.00);
-        Account myAccount = new Account("My account", 0.00);
-
+        Account account = new Account("Account's balance:", 100.00);
+            
         System.out.println("Initial state");
-        System.out.println(matthewsAccount);
-        System.out.println(myAccount);
-
-        matthewsAccount.withdraw(100);
-        System.out.println("The balance of Matthews account is now: " + matthewsAccount.balance());
-        myAccount.deposit(100);
-        System.out.println("The balance of my account is now: " + myAccount.balance());
-
+        System.out.println(account);
+            
+        account.deposit(20);
+        System.out.println("The balance of account is now: " + account.balance());
+            
         System.out.println("End state");
-        System.out.println(matthewsAccount);
-        System.out.println(myAccount);
+        System.out.println(account);
 
 
     }
