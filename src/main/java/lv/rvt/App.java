@@ -7,9 +7,16 @@ public class App
 {
     public static void main(String[] args) {
         
-        Product product = new Product("Banana", 1.1, 13);
+        DecreasingCounter counter = new DecreasingCounter(100);
 
-        product.printProduct();
+        counter.printValue();
+
+        counter.reset();
+        //counter.decrement();
+        counter.printValue();
+
+        counter.decrement();
+        counter.printValue();
 
     }
 }
