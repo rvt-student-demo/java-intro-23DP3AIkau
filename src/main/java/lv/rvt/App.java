@@ -6,34 +6,21 @@ import java.util.*;
 public class App 
 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
+        PaymentCard paulsCard = new PaymentCard(20);
+        PaymentCard mattsCard = new PaymentCard(30);
         
-        Statistics statisticsTotal = new Statistics();
-        Statistics statisticsEven = new Statistics();
-        Statistics statisticsOdd = new Statistics();
-
-        System.out.println("Enter numbers: ");
-
-        while (true) {
-            int number = Integer.valueOf(scanner.nextLine());
-
-            if (number == -1) {
-                break;
-            }
-
-            statisticsTotal.addNumber(number);
-
-            if (number % 2 == 0) {
-                statisticsEven.addNumber(number);
-            } else {
-                statisticsOdd.addNumber(number);
-            }
-
-        }
-
-        System.out.println("Sum: " + statisticsTotal.sum());
-        System.out.println("Sum of even numbers: " + statisticsEven.sum());
-        System.out.println("Sum of odd numbers: " + statisticsOdd.sum());
+        paulsCard.eatHeartily();
+        mattsCard.eatAffordably();
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matt: " + mattsCard);
+        paulsCard.addMoney(20.00);
+        mattsCard.eatHeartily();
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matt: " + mattsCard);
+        paulsCard.eatAffordably();
+        paulsCard.eatAffordably();
+        mattsCard.addMoney(50);
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matt: " + mattsCard);
     }
 }
