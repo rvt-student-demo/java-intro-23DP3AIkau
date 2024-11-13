@@ -6,17 +6,34 @@ import java.util.*;
 public class App 
 {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
         
-        DecreasingCounter counter = new DecreasingCounter(100);
+        Statistics statisticsTotal = new Statistics();
+        Statistics statisticsEven = new Statistics();
+        Statistics statisticsOdd = new Statistics();
 
-        counter.printValue();
+        System.out.println("Enter numbers: ");
 
-        counter.reset();
-        //counter.decrement();
-        counter.printValue();
+        while (true) {
+            int number = Integer.valueOf(scanner.nextLine());
 
-        counter.decrement();
-        counter.printValue();
+            if (number == -1) {
+                break;
+            }
 
+            statisticsTotal.addNumber(number);
+
+            if (number % 2 == 0) {
+                statisticsEven.addNumber(number);
+            } else {
+                statisticsOdd.addNumber(number);
+            }
+
+        }
+
+        System.out.println("Sum: " + statisticsTotal.sum());
+        System.out.println("Sum of even numbers: " + statisticsEven.sum());
+        System.out.println("Sum of odd numbers: " + statisticsOdd.sum());
     }
 }
