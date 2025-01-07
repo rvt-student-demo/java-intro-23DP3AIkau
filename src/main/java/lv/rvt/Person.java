@@ -3,58 +3,39 @@ package lv.rvt;
 public class Person {
 
     private String name;
-    private int age;
-    private int weight;
+    private SimpleDate birthday;
     private int height;
+    private int weight;
 
-    public Person(String name) {
-        this(name, 0, 0, 0);
-    }
-
-    public Person(String name, int age, int height, int weight) {
+    public Person(String name, SimpleDate birthday, int height, int weight) {
         this.name = name;
-        this.age = age;
-        this.weight = weight;
+        this.birthday = birthday;
         this.height = height;
+        this.weight = weight;
     }
 
-    // other constructors and methods
-
-    public String getName() {
-        return this.name;
-    }
-
-    public int getAge() {
-        return this.age;
-    }
-
-    public int getHeight() {
-        return this.height;
-    }
-
-    public int getWeight() {
-        return this.weight;
-    }
-
-    public void growOlder() {
-        this.age = this.age + 1;
-    }
-
-    public void setHeight(int newHeight) {
-        this.height = newHeight;
-    }
-
-    public void setWeight(int newWeight) {
-        this.weight = newWeight;
-    }
-
-    public double bodyMassIndex() {
-        double heightPerHundred = this.height / 100.0;
-        return this.weight / (heightPerHundred * heightPerHundred);
-    }
-
+    
     @Override
-    public String toString() {
-        return this.name + ", age " + this.age + " years";
+    public boolean equals(Object compared) {
+        if (this == compared) {
+            return true;
+        }
+
+        if (!(compared instanceof Person)) {
+            return false;
+        }
+
+        Person comparedPerson = (Person) compared;
+
+        if (this.name == comparedPerson.name
+                && this.height == comparedPerson.height
+                && this.weight == comparedPerson.weight
+                && this.birthday.getYear() == comparedPerson.birthday.getYear()
+                && this.birthday.getMonth() == comparedPerson.birthday.getMonth()
+                && this.birthday.getDay() == comparedPerson.birthday.getDay()) {
+            return true;
+        }
+
+        return false;
     }
 }
