@@ -1,19 +1,14 @@
 package lv.rvt;
 
 public class Box {
-    public double width;
-    public double height;
-    public double length;
-    public double side;
+    private double width;
+    private double height;
+    private double length;
 
     public Box(double width, double height, double length){
         this.width = width;
         this.height = height;
         this.length = length;
-    }
-
-    Box(double side) {
-        this.side = side;
     }
 
 
@@ -36,15 +31,15 @@ public class Box {
         return this.width*this.length*this.height;
     }
 
-    public double faceArea() {
+    private double faceArea() {
         return this.width*this.height;
     }
     
-    public double topArea() {
+    private double topArea() {
         return this.width*this.length;
     }
 
-    public double sideArea() {
+    private double sideArea() {
         return this.length*this.height;
     }
 
