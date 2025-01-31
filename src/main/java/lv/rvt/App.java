@@ -7,24 +7,17 @@ import java.util.*;
 public class App{
 
     public static void main(String[] args) {
-        SimpleDate date = new SimpleDate(24, 3, 2017);
-        SimpleDate date2 = new SimpleDate(23, 7, 2017);
+        ArrayList<Person> persons = new ArrayList<Person>();
+        persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
+        persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
+        
+        printPersons(persons);
 
-        Person leo = new Person("Leo", date, 62, 9);
-        Person lily = new Person("Lily", date2, 65, 8);
 
-        if (leo.equals(lily)) {
-            System.out.println("Is this quite correct?");
-        } else {
-            System.out.println("Seems to work");
-        }
-
-        Person leoWithDifferentWeight = new Person("Leo", date, 62, 10);
-
-        if (leo.equals(leoWithDifferentWeight)) {
-            System.out.println("Is this quite correct?");
-        } else {
-            System.out.println("Seems to work");
+    }
+    public static void printPersons(ArrayList<Person> persons) {
+        for (int i = 0; i < persons.size(); i++) {
+            System.out.println(persons.get(i));
         }
     }
 }
