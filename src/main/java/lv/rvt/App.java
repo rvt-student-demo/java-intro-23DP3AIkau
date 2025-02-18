@@ -1,17 +1,13 @@
 package lv.rvt;
-
-import java.lang.reflect.Array;
-import java.util.*;
-
+import java.util.Scanner;
+import java.io.BufferedReader;
+import java.util.ArrayList;
 
 public class App{
-
-    public static void main(String[] args) {
-        ProductWarehouseWithHistory juice = new ProductWarehouseWithHistory("Juice", 1000.0, 1000.0);
-        juice.takeFromWarehouse(11.3);
-        juice.addToWarehouse(1.0);
-        //System.out.println(juice.history()); // [1000.0, 988.7, 989.7]
-            
-        juice.printAnalysis();
+    public static void main( String[] args ) throws Exception{
+        ArrayList<Person> personList = PersonManager.getPersonList();
+        for (Person person : personList){
+            System.out.println(person);
+        }
     }
 }
