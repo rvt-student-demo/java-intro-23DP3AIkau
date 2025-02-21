@@ -12,8 +12,20 @@ public class Person {
         this.age = age;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
     @Override
     public String toString() {
-        return name + "\n   " + address;
+        return name + "\n   " + age + "\n   " + address;
     }
 }
