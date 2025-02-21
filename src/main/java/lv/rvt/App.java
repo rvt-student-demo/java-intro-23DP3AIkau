@@ -1,16 +1,12 @@
 package lv.rvt;
 
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
-        ArrayList<Person> personList = PersonManager.getPersonList();
-
-        for (Person person : personList) {
-            System.out.println(person);
-        }
+        
+        PersonManager.printPersonTable();
 
         System.out.println("Would you like to add a new person? (yes/no)");
         String response = scanner.nextLine();
@@ -26,8 +22,10 @@ public class App {
             Person newPerson = new Person(name, address, age);
             PersonManager.addPerson(newPerson);
             System.out.println("Person added successfully!");
+            
+            System.out.println("Updated Person Table:");
+            PersonManager.printPersonTable();
         }
-
         scanner.close();
     }
 }
